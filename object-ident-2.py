@@ -3,12 +3,12 @@ import cv2
 #thres = 0.45 # Threshold to detect object
 
 classNames = []
-classFile = "/home/yamini/Desktop/Object_Detection_Files/coco.names"
+classFile = "/home/ghananjanisaini/Desktop/Object_Detection_Files/coco.names"
 with open(classFile,"rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
-configPath = "/home/yamini/Desktop/Object_Detection_Files/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
-weightsPath = "/home/yamini/Desktop/Object_Detection_Files/frozen_inference_graph.pb"
+configPath = "/home/ghananjanisaini/Desktop/Object_Detection_Files/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
+weightsPath = "/home/ghananjanisaini/Desktop/Object_Detection_Files/frozen_inference_graph.pb"
 
 net = cv2.dnn_DetectionModel(weightsPath,configPath)
 net.setInputSize(320,320)
